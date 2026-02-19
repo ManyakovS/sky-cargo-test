@@ -4,6 +4,7 @@ export default defineConfig({
   build: {
     manifest: true,
     outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       input: {
         main: './src/js/index.js',

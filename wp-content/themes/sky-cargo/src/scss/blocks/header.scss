@@ -1,0 +1,25 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+    background-color: $main-color;
+    
+    &__container {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    &__contacts {
+        display: flex;
+        align-items: center;
+        column-gap: $space-lg;
+    
+        .contacts__actions {
+            display: flex;
+            column-gap: $space-s
+        }
+    }
+}

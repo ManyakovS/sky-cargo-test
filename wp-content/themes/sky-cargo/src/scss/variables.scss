@@ -1,0 +1,56 @@
+// Основной шрифт
+$font-main: 'Manrope', sans-serif;
+
+// Цвета
+$main-color: #C90C0F;
+$font-color: #212635;
+$white: #FFFFFF;
+$light-grey: #9DA7B4;
+$background-color: #F1F1F1;
+$secondary-color: #212635;
+
+// Вес шрифта
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+$weight-extra-bold: 800;
+
+// Шрифты
+$text-xs:   0.75rem; // 12px
+$text-sm:   0.875rem; // 14px
+$text-base: 1rem;     // 16px
+$text-lg:   1.125rem; // 18px
+$text-xl:   1.25rem;  // 20px
+$text-2xl:  1.5rem;   // 24px
+$text-3xl:  1.875rem; // 30px
+$text-4xl:  2.25rem;  // 36px
+$text-large: 2.75rem;   // 44px
+
+$text-sizes: (
+  "xs":    $text-xs,
+  "sm":    $text-sm,
+  "base":  $text-base,
+  "lg":    $text-lg,
+  "xl":    $text-xl,
+  "2xl":   $text-2xl,
+  "3xl":   $text-3xl,
+  "4xl":   $text-4xl,
+  "large": $text-large
+);
+
+$space-xs:  4px;
+$space-xxs: 6px; 
+$space-sm:  8px;
+$space-s:   12px;
+$space-md:  16px;
+$space-lg:  24px;
+$space-xl:  32px;
+$space-xm:  44px;
+$space-xxl: 64px;
+
+// Border
+$radius-sm: 6px; 
+$radius-md: 12px;
+$radius-full: 100%;

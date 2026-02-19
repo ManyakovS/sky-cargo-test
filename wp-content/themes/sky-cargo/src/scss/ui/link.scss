@@ -1,0 +1,14 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.link {
+    @include text-base;
+    font-weight: $weight-regular;
+    color: $white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: rgba($white, 0.9);
+    }
+}

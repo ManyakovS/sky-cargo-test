@@ -1,0 +1,55 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.btn {
+  @include text-style("sm");
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: $radius-sm;
+
+  background-color: $main-color;
+  color: $white;
+
+  &:hover {
+    background-color: rgba($main-color, 0.9);
+  }
+
+  &--white {
+    background-color: $white;
+    color: $font-color;
+    
+    &:hover {
+      background-color: rgba($white, 0.9);
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    color: $white;
+
+    &:hover {
+      background-color: rgba($secondary-color, 0.9);
+    }
+  }
+
+  &--small {
+    padding: 7px 18px;
+    @include text-sm;
+  }
+
+  &--base {
+    padding: 13px 24px;
+  }
+
+  &--medium {
+    padding: 19px 44px;
+  }
+
+  &--large {
+    padding: 19px 69px;
+  }
+}
