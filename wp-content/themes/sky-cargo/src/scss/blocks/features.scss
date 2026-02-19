@@ -1,0 +1,50 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.features {
+  padding: $space-xm 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-lg;
+
+  &__title {
+    width: 100%;
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: $space-s;
+    padding: $space-lg;
+    background-color: $white;
+    color: $main-color;
+    transition:
+      color,
+      background-color 0.3s ease;
+    width: max(300px, calc(25% - #{$space-lg}));
+    border-radius: $radius-md;
+
+    &__title {
+        @include text-2xl;
+    }
+
+    &__description {
+        color: $font-color;
+        line-height: 1.25rem;
+    }
+
+    &__icon svg g rect {
+      fill: currentColor !important;
+      stroke: currentColor !important;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $main-color;
+
+      .feature-card__title, .feature-card__description {
+        color: inherit;
+      }
+    }
+  }
+}

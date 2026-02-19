@@ -5,7 +5,6 @@
     background-color: $main-color;
     
     &__container {
-        @include container;
         display: flex;
         justify-content: space-between;
         align-items: center;

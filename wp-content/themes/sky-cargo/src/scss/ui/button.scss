@@ -47,6 +47,7 @@
 
   &--medium {
     padding: 19px 44px;
+    @include text-lg;
   }
 
   &--large {

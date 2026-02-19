@@ -6,7 +6,7 @@
     <?php wp_head(); ?> </head>
 <body <?php body_class(); ?>>
     <header class="header">
-        <div class="header__container">
+        <div class="container header__container">
             <?php get_template_part('template-parts/ui/logo', null, ['class' => 'header__logo']); ?>
             
             <?php get_template_part('template-parts/navigation/main-menu'); ?>
