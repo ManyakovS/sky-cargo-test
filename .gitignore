@@ -1,0 +1,14 @@
+/*
+
+!/.gitignore
+!/README.md
+
+/wp-content/*
+/wp-content/themes/*
+
+!/wp-content
+!/wp-content/themes/
+!/wp-content/themes/sky-cargo/
+
+**/node_modules/
+**/.DS_Store
