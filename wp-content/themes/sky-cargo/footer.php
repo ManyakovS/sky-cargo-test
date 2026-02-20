@@ -16,6 +16,7 @@
         <span>Политика конфиденциальности</span>
     </div>
 </footer>
+<?php wp_footer(); ?>.
 </body>
 
 </html>

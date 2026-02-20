@@ -10,10 +10,13 @@
 @use "blocks/hero";
 @use "blocks/features";
 @use "blocks/footer-menu";
+@use "blocks/lead-form";
 
 // ui
 @use "ui/link";
 @use "ui/button";
+@use "ui/checkbox";
+@use "ui/input";
 
 body {
     display: flex;

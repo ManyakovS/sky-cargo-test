@@ -1,0 +1,21 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.lead-form {
+  background: $main-color;
+  margin: $space-3xl auto;
+  padding: $space-xl $space-xm;
+  border-radius: $radius-md;
+  color: $white;
+
+  &__fields {
+    margin-top: $space-xm;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-lg;
+  }
+
+  &--full-row {
+    grid-column: 1 / 3;
+  }
+}
