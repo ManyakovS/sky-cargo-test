@@ -2,6 +2,7 @@
 
 .hero {
     background-color: $white;
+    min-height: 252px;
     &__container {
         position: relative;
         padding: $space-xxm 0;

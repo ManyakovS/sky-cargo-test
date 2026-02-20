@@ -1,0 +1,35 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+    margin-top: auto;
+    background-color: $secondary-color;
+    color: $white;
+    padding: $space-3xl 0;
+
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__action {
+        display: flex;
+        flex-direction: column;
+        row-gap: $space-xm;
+
+        .footer__logo img {
+            width: 160px;
+            height: 32px;
+            opacity: 0.7;
+        }
+    }
+
+    .footer__bottom {
+        margin-top: $space-xl;
+        display: flex;
+        justify-content: space-between;
+        @include text-xxs;
+        color: $light-grey;
+    }
+}

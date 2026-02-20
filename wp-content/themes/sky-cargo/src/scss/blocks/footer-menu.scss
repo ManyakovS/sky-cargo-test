@@ -1,0 +1,44 @@
+@use "../variables.scss" as *;
+@use "../mixins.scss" as *;
+
+.footer-menu {
+  display: flex;
+  column-gap: $space-3xm;
+
+  .menu-item {
+    a {
+      @include text-base;
+      color: $light-grey;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    &.menu-item-has-children {
+      display: flex;
+      flex-direction: column;
+      row-gap: $space-lg;
+
+      & > a {
+          pointer-events: none;
+          cursor: text;
+          text-decoration: none;
+      }
+    }
+  }
+
+  .sub-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: $space-sm;
+
+    .menu-item {
+      a {
+        @include text-sm;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -6,14 +6,16 @@ if (!empty($features)) : ?>
     <section class="features container">
         <h2 class="features__title block-title">Сервис для перевозки ценных грузов</h2>
 
-        <?php foreach ($features as $feature) :
-            get_template_part('template-parts/components/feature-card', null, [
-                'icon'  => $feature['icon'],
-                'title' => $feature['title'],
-                'desc'  => $feature['description'],
-            ]);
-        endforeach;
-        ?>
+        <div class="features__cards">
+            <?php foreach ($features as $feature) :
+                get_template_part('template-parts/components/feature-card', null, [
+                    'icon'  => $feature['icon'],
+                    'title' => $feature['title'],
+                    'desc'  => $feature['description'],
+                ]);
+            endforeach;
+            ?>
+        </div>
 
     </section>
 <?php endif; ?>

@@ -14,7 +14,9 @@
   font-family: $font-main;
   font-style: normal;
 }
-
+@mixin text-xxs {
+  @include text-style("xxs", 0.875rem);
+}
 @mixin text-xs {
   @include text-style("xs");
 }
@@ -46,7 +48,6 @@
 .container {
   width: 1280px;
   margin: 0 auto;
-  display: flex;
 }
 
 .block-title {

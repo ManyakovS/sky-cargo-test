@@ -3,12 +3,17 @@
 
 .features {
   padding: $space-xm 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: $space-lg;
+  
 
   &__title {
     width: 100%;
+    margin-bottom: $space-xm;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-lg;
   }
 
   .feature-card {

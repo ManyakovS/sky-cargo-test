@@ -5,13 +5,21 @@
 
 // blocks
 @use "blocks/header";
+@use "blocks/footer";
 @use "blocks/main-menu";
 @use "blocks/hero";
 @use "blocks/features";
+@use "blocks/footer-menu";
 
 // ui
 @use "ui/link";
 @use "ui/button";
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 main {
     background-color: $background-color;
