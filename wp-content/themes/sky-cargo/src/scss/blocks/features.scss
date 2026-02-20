@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .features {
-  padding: $space-xm 0;
+  padding: $space-xm 0 $space-3xl;
   
 
   &__title {

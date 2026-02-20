@@ -1,0 +1,66 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.delivery {
+  margin: $space-xm auto $space-3xl;
+
+  &__title {
+    &--accent {
+      color: $main-color;
+      font-weight: $weight-bold;
+    }
+  }
+
+  &-table {
+    margin-top: $space-xm;
+    &__head {
+      .delivery-table__cell {
+        @include text-lg;
+        text-transform: uppercase;
+        background-color: $light-grey-2;
+        color: $white;
+        letter-spacing: 0.2rem;
+        font-weight: $weight-bold;
+
+        &--base {
+          background-color: $light-grey;
+        }
+
+        &--primary {
+          background-color: $main-color;
+        }
+
+        &--secondary {
+          background-color: $secondary-color;
+        }
+      }
+    }
+
+    &__row:nth-child(even) {
+      .delivery-table__cell:not([class*="--primary"]):not([class*="--base"]):not([class*="--secondary"]) {
+        background-color: $light-grey-2;
+      }
+    }
+    &__row:nth-child(odd) {
+      .delivery-table__cell:not([class*="--primary"]):not([class*="--base"]):not([class*="--secondary"]) {
+        background-color: $white;
+      }
+    }
+
+    &__cell {
+      width: 33.3%;
+      text-align: center;
+      padding: 19px;
+
+      &--secondary {
+        color: $white;
+        background-color: $secondary-color;
+      }
+
+      &--description {
+        @include text-sm;
+        font-weight: $weight-semi-bold;
+      }
+    }
+  }
+}
