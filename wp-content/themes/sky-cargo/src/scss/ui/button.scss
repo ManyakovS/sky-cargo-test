@@ -57,6 +57,11 @@
 
   &--large {
     padding: 19px 69px;
+    @include text-lg;
+
+    @include media-down($breakpoint-xl) {
+      @include text-base;
+    }
 
   }
 }

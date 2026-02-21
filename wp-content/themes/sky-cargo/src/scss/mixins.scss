@@ -81,8 +81,8 @@
 }
 
 .container {
-  width: calc(100% - 40px);
-  margin: 0 20px;
+  width: calc(100% - calc($space-md * 2));
+  margin: 0 $space-md;
 
   @include media-up($breakpoint-xl) {
     width: 1280px;

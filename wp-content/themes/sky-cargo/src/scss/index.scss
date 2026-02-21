@@ -3,6 +3,13 @@
 @use "fonts";
 @use "mixins" as *;
 
+// ui
+@use "ui/link";
+@use "ui/button";
+@use "ui/checkbox";
+@use "ui/input";
+@use "ui/divider";
+
 // blocks
 @use "blocks/header";
 @use "blocks/footer";
@@ -13,13 +20,6 @@
 @use "blocks/footer-menu";
 @use "blocks/lead-form";
 @use "blocks/delivery";
-
-// ui
-@use "ui/link";
-@use "ui/button";
-@use "ui/checkbox";
-@use "ui/input";
-@use "ui/divider";
 
 body {
     display: flex;

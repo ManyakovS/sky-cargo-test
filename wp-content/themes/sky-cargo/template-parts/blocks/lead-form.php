@@ -27,7 +27,7 @@
         get_template_part('template-parts/ui/input', null, [
             'type' => 'email',
             'name' => 'email',
-            'placeholder' => 'e-mail',
+            'placeholder' => 'E-mail',
             'required' => true
         ]);
         ?>

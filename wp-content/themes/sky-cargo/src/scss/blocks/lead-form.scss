@@ -4,18 +4,35 @@
 .lead-form {
   background: $main-color;
   margin: $space-3xl auto;
-  padding: $space-xl $space-xm;
-  border-radius: $radius-md;
   color: $white;
+  padding: $space-xxl $space-md;
+  margin: 0;
+  width: 100%;
+  
+  @include media-up($breakpoint-xl) {
+    border-radius: $radius-md;
+    padding: $space-xl $space-xm;
+  }
 
   &__fields {
     margin-top: $space-xm;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: $space-lg;
+    display: flex;
+    flex-direction: column;
+
+    @include media-up($breakpoint-xl) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &--full-row {
     grid-column: 1 / 3;
+  }
+
+  &__submit {
+    @include media-down($breakpoint-xl) {
+      width: 100%;
+    }
   }
 }
