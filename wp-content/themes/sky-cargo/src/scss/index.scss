@@ -7,6 +7,7 @@
 @use "blocks/header";
 @use "blocks/footer";
 @use "blocks/main-menu";
+@use "blocks/burger-menu";
 @use "blocks/hero";
 @use "blocks/features";
 @use "blocks/footer-menu";
@@ -18,6 +19,7 @@
 @use "ui/button";
 @use "ui/checkbox";
 @use "ui/input";
+@use "ui/divider";
 
 body {
     display: flex;

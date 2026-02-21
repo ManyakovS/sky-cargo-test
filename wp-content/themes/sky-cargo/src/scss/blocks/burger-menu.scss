@@ -1,0 +1,124 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.burger-menu {
+  &__trigger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16px;
+    height: 14px;
+    position: relative;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    row-gap: $space-lg;
+    @include text-base;
+    color: $font-color;
+
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: $white;
+    padding: 80px $space-lg $space-lg;
+    transition: left 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 100;
+    overflow-y: auto;
+
+    &.is-open {
+      left: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: $space-lg;
+
+    .menu-item {
+      a {
+        color: inherit;
+      }
+
+      &.menu-item-has-children {
+        & > a {
+          display: flex;
+          align-items: center;
+
+          &::after {
+            margin-left: $space-xxs;
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            -webkit-mask: url("../images/arrow.svg") no-repeat center / contain;
+            mask: url("../images/arrow.svg") no-repeat center / contain;
+
+            background-color: currentColor;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        &.is-expanded > a::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .sub-menu {
+      padding-left: $space-xl;
+      padding-top: $space-lg;
+      display: none;
+
+      flex-direction: column;
+      row-gap: $space-lg;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    row-gap: $space-s;
+    width: max-content;
+
+    & > a {
+        width: 100%;
+    }
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}

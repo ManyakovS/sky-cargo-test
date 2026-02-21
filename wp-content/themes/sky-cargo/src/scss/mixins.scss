@@ -45,9 +45,41 @@
   @include text-style("large", $ls: 0.02em);
 }
 
+@mixin media-up($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin media-down($size) {
+  @media screen and (max-width: ($size - 1px)) {
+    @content;
+  }
+}
+
+@mixin hide-up($size) {
+  @include media-up($size) {
+    display: none !important;
+  }
+}
+
+@mixin hide-down($size) {
+  @include media-down($size) {
+    display: none !important;
+  }
+}
+
+.hide-xl {
+  @include hide-up($breakpoint-xl);
+}
+
 .container {
-  width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+  @include media-up($breakpoint-xl) {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
 }
 
 .visually-hidden {

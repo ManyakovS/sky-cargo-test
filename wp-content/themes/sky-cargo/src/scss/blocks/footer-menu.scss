@@ -17,12 +17,6 @@
       display: flex;
       flex-direction: column;
       row-gap: $space-lg;
-
-      & > a {
-          pointer-events: none;
-          cursor: text;
-          text-decoration: none;
-      }
     }
   }
 

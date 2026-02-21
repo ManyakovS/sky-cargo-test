@@ -9,6 +9,7 @@ $light-grey: #9DA7B4;
 $light-grey-2: #F8F8F8;
 $background-color: #F1F1F1;
 $secondary-color: #212635;
+$divider-color: #DAE7ED;
 
 // Вес шрифта
 $weight-light: 300;
@@ -61,3 +62,8 @@ $radius-xs: 3px;
 $radius-sm: 6px; 
 $radius-md: 12px;
 $radius-full: 100%;
+
+// Breakpoints
+$breakpoint-xs: 320px;
+$breakpoint-sm: 768px;
+$breakpoint-xl: 1280px;

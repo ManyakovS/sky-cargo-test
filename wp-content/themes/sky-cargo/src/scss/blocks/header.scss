@@ -15,10 +15,23 @@
         display: flex;
         align-items: center;
         column-gap: $space-lg;
+        color: $white;
     
         .contacts__actions {
             display: flex;
             column-gap: $space-s
+        }
+    }
+
+    @include media-down($breakpoint-xl) {
+        &__contacts, & .main-menu {
+            display: none;
+        }
+    }
+
+    @include media-up($breakpoint-xl) {
+        & .burger-menu {
+            display: none;
         }
     }
 }

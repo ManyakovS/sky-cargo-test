@@ -16,5 +16,7 @@
 
             <?php get_template_part('template-parts/blocks/header-contacts'); ?>
 
+            <?php get_template_part('template-parts/navigation/burger-menu'); ?>
+
         </div>
     </header>

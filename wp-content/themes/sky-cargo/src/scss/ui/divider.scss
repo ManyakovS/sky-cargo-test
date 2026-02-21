@@ -1,0 +1,8 @@
+@use "../variables" as *;
+
+.divider {
+  border: none;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid $divider-color;
+}
