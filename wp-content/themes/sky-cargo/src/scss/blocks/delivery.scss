@@ -5,7 +5,7 @@
   margin: $space-xm auto $space-3xl;
 
     @include media-down($breakpoint-xl) {
-      margin-top: $space-lg;
+      margin: $space-lg auto 0 auto;
     }
 
   &__title {
