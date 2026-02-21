@@ -1,0 +1,58 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.expand-card {
+  background-color: inherit;
+  overflow: hidden;
+  color: $main-color;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__title {
+    flex-grow: 1;
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+
+    .icon-arrow {
+      display: block;
+      width: 100%;
+      height: 100%;
+      -webkit-mask: url("../images/arrow.svg") no-repeat center / contain;
+      mask: url("../images/arrow.svg") no-repeat center / contain;
+      background-color: $main-color;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: padding 0.3s ease;
+  }
+
+  &.is-open {
+    .expand-card__arrow {
+      transform: rotate(180deg);
+      .icon-arrow {
+        background-color: $main-color;
+      }
+    }
+
+    .expand-card__body {
+      grid-template-rows: 1fr;
+    }
+  }
+}

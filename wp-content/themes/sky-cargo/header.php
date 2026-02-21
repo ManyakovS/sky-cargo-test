@@ -11,12 +11,8 @@
     <header class="header">
         <div class="container header__container">
             <?php get_template_part('template-parts/ui/logo', null, ['class' => 'header__logo']); ?>
-
             <?php get_template_part('template-parts/navigation/main-menu'); ?>
-
             <?php get_template_part('template-parts/blocks/header-contacts'); ?>
-
             <?php get_template_part('template-parts/navigation/burger-menu'); ?>
-
         </div>
     </header>

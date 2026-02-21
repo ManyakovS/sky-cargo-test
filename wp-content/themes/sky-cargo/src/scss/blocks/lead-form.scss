@@ -6,12 +6,16 @@
   margin: $space-3xl auto;
   color: $white;
   padding: $space-xxl $space-md;
-  margin: 0;
-  width: 100%;
+
   
   @include media-up($breakpoint-xl) {
     border-radius: $radius-md;
     padding: $space-xl $space-xm;
+  }
+  
+  @include media-down($breakpoint-xl) {
+    margin: 0;
+    width: 100%;
   }
 
   &__fields {

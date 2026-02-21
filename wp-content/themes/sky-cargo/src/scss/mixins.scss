@@ -80,6 +80,10 @@
   @include hide-down($breakpoint-xl);
 }
 
+.hide-sm-down {
+  @include hide-down($breakpoint-sm);
+}
+
 .container {
   width: calc(100% - calc($space-md * 2));
   margin: 0 $space-md;

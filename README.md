@@ -22,7 +22,7 @@
    - Впишите данные вашей БД в `wp-config.php`.
 
 4. **Настройка инструментов сборки:**
-   - cd wp-content/themes/sky-cargo
+   - cd wp-content/themes/sky-cargo/
    - npm install
 
 5. **Активация:**

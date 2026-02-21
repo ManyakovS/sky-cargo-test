@@ -2,8 +2,11 @@
 @use "../mixins" as *;
 
 .features {
-  padding: $space-xm 0 $space-3xl;
+  padding: $space-xm 0 $space-3xm;
   
+  @include media-up($breakpoint-xl) {
+    padding: $space-xm 0 $space-3xl;
+  }
 
   &__title {
     width: 100%;
@@ -26,16 +29,24 @@
     transition:
       color,
       background-color 0.3s ease;
-    width: max(300px, calc(25% - #{$space-lg}));
+    width: calc(25% - #{$space-lg});
     border-radius: $radius-md;
 
+    @include media-down($breakpoint-xl) {
+      width: calc(33.3% - #{$space-lg});
+    }
+
+    @include media-down($breakpoint-sm) {
+      width: calc(50% - #{$space-lg});
+    }
+
     &__title {
-        @include text-2xl;
+      @include text-2xl;
     }
 
     &__description {
-        color: $font-color;
-        line-height: 1.25rem;
+      color: $font-color;
+      line-height: 1.25rem;
     }
 
     &__icon svg g rect {
@@ -47,9 +58,26 @@
       color: $white;
       background-color: $main-color;
 
-      .feature-card__title, .feature-card__description {
+      .feature-card__title,
+      .feature-card__description {
         color: inherit;
       }
+    }
+  }
+
+  .features__card-expand {
+    background-color: $white;
+    border-radius: $radius-md;
+    padding: $space-ml;
+    @include text-base;
+    font-weight: $weight-regular;
+
+    .expand-card__header {
+      column-gap: $space-s;
+    }
+
+    .expand-card__content {
+      color: $font-color;
     }
   }
 }
