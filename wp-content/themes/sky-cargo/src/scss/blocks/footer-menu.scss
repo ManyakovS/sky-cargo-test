@@ -7,11 +7,10 @@
     column-gap: $space-3xm;
   }
 
-
   @include media-down($breakpoint-xl) {
     display: grid;
     grid-template-columns: repeat(2, minmax(160px, max-content));
-    column-gap: $space-xxm;
+    column-gap: $space-xl;
 
     place-content: space-between;
     grid-template-areas:
@@ -40,7 +39,11 @@
     &.menu-item-has-children {
       display: flex;
       flex-direction: column;
-      row-gap: $space-lg;
+      row-gap: $space-s;
+
+      @include media-up($breakpoint-xl) {
+        row-gap: $space-lg;
+      }
     }
   }
 
@@ -59,6 +62,9 @@
       a {
         @include text-sm;
 
+        @include media-down($breakpoint-xl) {
+          @include text-xs;
+        }
         &:hover {
           color: $white;
         }

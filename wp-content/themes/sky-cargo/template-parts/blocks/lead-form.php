@@ -1,4 +1,4 @@
-<form action="<?php echo admin_url('admin-ajax.php'); ?>" method="POST" class="lead-form container">
+<form id="lead-form" action="<?php echo admin_url('admin-ajax.php'); ?>" method="POST" class="lead-form container">
     <?php wp_nonce_field('lead_form_action', 'nonce'); ?>
 
     <h3 class="lead-form__title block-title">Оставить заявку</h3>

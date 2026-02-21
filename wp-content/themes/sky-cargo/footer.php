@@ -6,7 +6,7 @@
             <?php get_template_part('template-parts/ui/button', null, [
                 'text'  => 'Оставить заявку',
                 'class' => 'btn--primary btn--base',
-                'href'  => '#callback"'
+                'href'  => '#lead-form"'
             ]); ?>
         </div>
         <?php get_template_part('template-parts/navigation/footer-menu'); ?>

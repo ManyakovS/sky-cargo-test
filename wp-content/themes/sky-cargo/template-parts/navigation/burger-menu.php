@@ -53,7 +53,7 @@ $phone_link = 'tel:' . preg_replace('/[^0-9+]/', '', $phone);
 
         <?php get_template_part('template-parts/ui/button', null, [
             'text'  => 'Оставить заявку',
-            'href'  => '#callback',
+            'href'  => '#lead-form',
             'class' => 'btn--primary btn--small'
         ]); ?>
         </div>
