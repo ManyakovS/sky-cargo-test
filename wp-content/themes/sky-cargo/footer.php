@@ -12,6 +12,8 @@
         <?php get_template_part('template-parts/navigation/footer-menu'); ?>
     </div>
     <div class="footer__bottom container">
+        <?php get_template_part('template-parts/ui/divider', null, ['class' => 'footer__divider']); ?>
+
         <span>ООО "Кита Шиппинг" ИНН 5405075596</span>
         <span>Политика конфиденциальности</span>
     </div>

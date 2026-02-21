@@ -2,34 +2,62 @@
 @use "../mixins" as *;
 
 .footer {
-    margin-top: auto;
-    background-color: $secondary-color;
-    color: $white;
+  margin-top: auto;
+  background-color: $secondary-color;
+  color: $white;
+  padding: $space-xm 0;
+  @include media-up($breakpoint-xl) {
     padding: $space-3xl 0;
+  }
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
 
-    &__top {
-        display: flex;
-        justify-content: space-between;
+    @include media-down($breakpoint-xl) {
+      flex-direction: column;
     }
 
-    &__action {
-        display: flex;
+    .footer__action {
+      display: flex;
+  
+      @include media-down($breakpoint-xl) {
+        margin-bottom: $space-xl;
+        justify-content: space-between;
+      }
+  
+      @include media-up($breakpoint-xl) {
         flex-direction: column;
         row-gap: $space-xm;
-
-        .footer__logo img {
-            width: 160px;
-            height: 32px;
-            opacity: 0.7;
-        }
+      }
     }
 
-    .footer__bottom {
-        margin-top: $space-xl;
-        display: flex;
-        justify-content: space-between;
-        @include text-xxs;
-        color: $light-grey;
+    .footer__logo img {
+      width: 160px;
+      height: 32px;
+      opacity: 0.7;
     }
+  }
+
+  &__bottom {
+    margin-top: $space-xl;
+    @include text-xxs;
+    color: $light-grey;
+    row-gap: $space-xxs;
+    display: flex;
+    flex-direction: column;
+
+    @include media-up($breakpoint-xl) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .footer__divider {
+      @include media-up($breakpoint-xl) {
+        display: none;
+      }
+      margin-bottom: $space-xl;
+    }
+  }
+
 }
