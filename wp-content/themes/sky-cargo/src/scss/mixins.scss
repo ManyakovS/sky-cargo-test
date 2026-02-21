@@ -38,6 +38,9 @@
 @mixin text-3xl {
   @include text-style("3xl");
 }
+@mixin text-4xm {
+  @include text-style("4xm");
+}
 @mixin text-4xl {
   @include text-style("4xl");
 }
@@ -73,8 +76,14 @@
   @include hide-up($breakpoint-xl);
 }
 
+.hide-xl-down {
+  @include hide-down($breakpoint-xl);
+}
+
 .container {
-  width: 100%;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+
   @include media-up($breakpoint-xl) {
     width: 1280px;
     margin: 0 auto;
@@ -94,5 +103,9 @@
 }
 
 .block-title {
-  @include text-large;
+  @include text-4xm;
+
+  @include media-up($breakpoint-xl) {
+    @include text-large;
+  }
 }

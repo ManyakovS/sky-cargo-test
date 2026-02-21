@@ -10,6 +10,6 @@
             ]); ?>
         </div>
 
-        <img class="hero__box" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/hero-box.png" alt="Курьерская доставка">
+        <img class="hero__box hide-xl-down" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/hero-box.png" alt="Курьерская доставка">
     </div>
 </section>

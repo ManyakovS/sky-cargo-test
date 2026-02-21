@@ -22,7 +22,7 @@
   &--white {
     background-color: $white;
     color: $font-color;
-    
+
     &:hover {
       background-color: rgba($white, 0.9);
     }
@@ -49,9 +49,14 @@
   &--medium {
     padding: 19px 44px;
     @include text-lg;
+    
+    @include media-down($breakpoint-xl) {
+      padding: 13px 44px;
+    }
   }
 
   &--large {
     padding: 19px 69px;
+
   }
 }

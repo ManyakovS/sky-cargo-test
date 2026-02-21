@@ -1,21 +1,44 @@
 @use "../variables" as *;
+@use "../mixins" as *;
 
 .hero {
+  display: flex;
+
+  @include media-up($breakpoint-xl) {
     background-color: $white;
     min-height: 252px;
-    &__container {
-        position: relative;
-        padding: $space-xxm 0;
-        display: flex;
-        flex-direction: column;
-        row-gap: $space-xl;
-    }
+  }
+  @include media-down($breakpoint-xl) {
+    background: url("../images/hero-background.png") no-repeat center / cover;
+    color: $white;
+    min-height: 288px;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    &__box {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 486px;
-        height: 252px;
+  &__container {
+    position: relative;
+    padding: $space-xxm 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: $space-xl;
+
+    @include media-down($breakpoint-xl) {
+      row-gap: $space-xm;
     }
+  }
+
+  &__title {
+    @include media-down($breakpoint-xl) {
+      width: 60%;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 486px;
+    height: 252px;
+  }
 }
