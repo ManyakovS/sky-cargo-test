@@ -1,7 +1,12 @@
 <?php
-
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
+
+require_once get_template_directory() . '/vendor/autoload.php';
+
+add_action('after_setup_theme', function () {
+    \Carbon_Fields\Carbon_Fields::boot();
+});
 
 add_action('carbon_fields_register_fields', 'crb_attach_features_section');
 function crb_attach_features_section()
@@ -21,9 +26,6 @@ function crb_attach_features_section()
                 )),
         ));
 }
-add_action('after_setup_theme', function () {
-    \Carbon_Fields\Carbon_Fields::boot();
-});
 
 add_action('carbon_fields_register_fields', function () {
     Container::make('post_meta', 'Данные заявки')

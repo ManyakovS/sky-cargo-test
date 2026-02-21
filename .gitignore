@@ -5,6 +5,7 @@
 
 /wp-content/*
 /wp-content/themes/*
+/wp-content/themes/sky-cargo/vendor
 
 !/wp-content
 !/wp-content/themes/
