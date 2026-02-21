@@ -4,18 +4,42 @@
 .delivery {
   margin: $space-xm auto $space-3xl;
 
+    @include media-down($breakpoint-xl) {
+      margin-top: $space-lg;
+    }
+
   &__title {
     &--accent {
       color: $main-color;
       font-weight: $weight-bold;
     }
+
+    @include media-down($breakpoint-xl) {
+      @include text-style("2xl");
+    }
   }
 
   &-table {
     margin-top: $space-xm;
+
+    @include media-down($breakpoint-xl) {
+      margin-top: $space-xl;
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: none;
+      /* Дефолтные стили контейнера */
+      width: calc(100% + 2 * $space-md);
+      transform: translateX(-$space-md)
+    }
+
     &__head {
       .delivery-table__cell {
         @include text-lg;
+
+        @include media-down($breakpoint-xl) {
+          @include text-sm;
+        }
+
         text-transform: uppercase;
         background-color: $light-grey-2;
         color: $white;
@@ -41,6 +65,7 @@
         background-color: $light-grey-2;
       }
     }
+
     &__row:nth-child(odd) {
       .delivery-table__cell:not([class*="--primary"]):not([class*="--base"]):not([class*="--secondary"]) {
         background-color: $white;
@@ -52,6 +77,16 @@
       text-align: center;
       padding: 19px;
 
+      @include media-down($breakpoint-xl) {
+        width: 35.9%;
+        @include text-xs;
+        padding: $space-s;
+
+        &:first-child {
+          width: 28.2%;
+        }
+      }
+
       &--secondary {
         color: $white;
         background-color: $secondary-color;
@@ -59,6 +94,11 @@
 
       &--description {
         @include text-sm;
+
+        @include media-down($breakpoint-xl) {
+          @include text-xs;
+        }
+
         font-weight: $weight-semi-bold;
       }
     }

@@ -11,6 +11,10 @@
   &__title {
     width: 100%;
     margin-bottom: $space-xm;
+
+  @include media-down($breakpoint-xl) {
+    @include text-style("2xl");
+  }
   }
 
   &__cards {
